@@ -124,50 +124,55 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Project card 1 — Kitchen (top right) */}
-            <div className="hero-enter-scale absolute -right-4 top-0 z-20 w-60 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl lg:right-0 lg:w-64">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image
-                  src="/images/kitchen_renovation.png"
-                  alt="Kitchen renovation"
-                  fill
-                  className="object-cover"
-                  sizes="256px"
-                />
+            {/* Right column: 4 project cards in a 2x2 grid layout */}
+            <div className="absolute right-0 top-0 bottom-0 flex w-[52%] flex-wrap content-start gap-3 lg:w-[55%]">
+              {/* Project 1 — Kitchen */}
+              <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                  <Image src="/images/kitchen_renovation.png" alt="Kitchen renovation" fill className="object-cover" sizes="220px" />
+                </div>
+                <div className="px-1 pb-1 pt-2">
+                  <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Kitchen Remodel</p>
+                  <p className="mt-0.5 text-[10px] text-white/40">4 weeks</p>
+                </div>
               </div>
-              <div className="px-1 pb-1 pt-2.5">
-                <p className="font-[family-name:var(--font-manrope)] text-xs font-medium text-white/90">
-                  Recent Project
-                </p>
-                <p className="mt-0.5 text-[11px] text-white/40">
-                  Kitchen — 4 weeks
-                </p>
+
+              {/* Project 2 — Outdoor Patio */}
+              <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                  <Image src="/images/outdoor_patio.png" alt="Outdoor patio" fill className="object-cover" sizes="220px" />
+                </div>
+                <div className="px-1 pb-1 pt-2">
+                  <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Outdoor Patio</p>
+                  <p className="mt-0.5 text-[10px] text-white/40">1 month</p>
+                </div>
+              </div>
+
+              {/* Project 3 — Bathroom */}
+              <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                  <Image src="/images/bathroom_remodel.png" alt="Bathroom renovation" fill className="object-cover" sizes="220px" />
+                </div>
+                <div className="px-1 pb-1 pt-2">
+                  <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Bathroom Reno</p>
+                  <p className="mt-0.5 text-[10px] text-white/40">6 weeks</p>
+                </div>
+              </div>
+
+              {/* Project 4 — Living Room */}
+              <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                  <Image src="/images/living_room_remodel.png" alt="Living room remodel" fill className="object-cover" sizes="220px" />
+                </div>
+                <div className="px-1 pb-1 pt-2">
+                  <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Living Room</p>
+                  <p className="mt-0.5 text-[10px] text-white/40">3 weeks</p>
+                </div>
               </div>
             </div>
 
-            {/* Project card 2 — Bathroom (bottom right) */}
-            <div className="hero-enter-scale absolute -right-2 bottom-4 z-20 w-56 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl lg:bottom-8 lg:right-2 lg:w-60">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image
-                  src="/images/bathroom_remodel.png"
-                  alt="Bathroom renovation"
-                  fill
-                  className="object-cover"
-                  sizes="240px"
-                />
-              </div>
-              <div className="px-1 pb-1 pt-2.5">
-                <p className="font-[family-name:var(--font-manrope)] text-xs font-medium text-white/90">
-                  Recent Project
-                </p>
-                <p className="mt-0.5 text-[11px] text-white/40">
-                  Bathroom — 6 weeks
-                </p>
-              </div>
-            </div>
-
-            {/* Stats floating pill — center right */}
-            <div className="hero-enter-scale absolute right-8 top-[55%] z-20 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 shadow-lg backdrop-blur-xl lg:right-16">
+            {/* Stats floating pill — overlapping bottom-right of grid */}
+            <div className="hero-enter-scale absolute bottom-2 right-[22%] z-30 rounded-full border border-white/10 bg-[#101014]/70 px-5 py-3 shadow-lg backdrop-blur-xl">
               <div className="flex items-center gap-3">
                 <span className="font-[family-name:var(--font-manrope)] text-2xl font-light text-white">250+</span>
                 <span className="text-xs text-white/40">Projects<br />completed</span>
