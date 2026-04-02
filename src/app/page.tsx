@@ -1,11 +1,25 @@
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { Portfolio } from "@/components/Portfolio";
+import { Testimonials } from "@/components/Testimonials";
+import { FAQs } from "@/components/FAQs";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+
 export default function Home() {
   return (
     <main>
-      <div className="flex min-h-screen items-center justify-center bg-primary-dark">
-        <h1 className="font-[family-name:var(--font-manrope)] text-4xl font-bold text-white">
-          JW Home Renovation
-        </h1>
-      </div>
+      <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Portfolio />
+      <Testimonials />
+      <FAQs />
+      <Contact />
+      <Footer />
     </main>
   );
 }
