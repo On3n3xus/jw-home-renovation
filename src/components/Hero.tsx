@@ -67,20 +67,75 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: Floating image cards for layered depth */}
-          <div className="relative hidden md:col-span-6 md:block lg:col-span-7">
-            {/* Translucent glass card with second image */}
-            <div className="hero-enter-scale absolute -right-4 bottom-12 z-20 w-64 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2.5 shadow-2xl backdrop-blur-xl lg:w-72">
+          {/* Right: Floating cards for layered depth */}
+          <div className="relative hidden min-h-[600px] md:col-span-6 md:block lg:col-span-7">
+
+            {/* Testimonial 1 — top left */}
+            <div className="hero-enter-scale absolute -left-6 top-0 z-30 max-w-[240px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:-left-8 lg:top-4">
+              <div className="mb-2 flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={`t1-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-[12px] leading-relaxed text-white/70">
+                &ldquo;Exceptional quality and professionalism from start to finish. Transformed our home.&rdquo;
+              </p>
+              <div className="mt-2.5 flex items-center gap-2">
+                <div className="h-6 w-6 rounded-full bg-gradient-to-br from-amber-200 to-amber-600" />
+                <span className="text-[11px] font-medium text-white/50">Rachel M.</span>
+              </div>
+            </div>
+
+            {/* Testimonial 2 — mid left */}
+            <div className="hero-enter-scale absolute -left-4 top-[170px] z-30 max-w-[220px] rounded-2xl border border-white/10 bg-[#101014]/60 p-4 shadow-2xl backdrop-blur-xl lg:left-0 lg:top-[180px]">
+              <div className="mb-2 flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={`t2-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-[12px] leading-relaxed text-white/70">
+                &ldquo;Our loft conversion added so much space. Thoughtful design and exceptional build quality.&rdquo;
+              </p>
+              <div className="mt-2.5 flex items-center gap-2">
+                <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-200 to-sky-600" />
+                <span className="text-[11px] font-medium text-white/50">Sophie W.</span>
+              </div>
+            </div>
+
+            {/* Testimonial 3 — bottom center-left */}
+            <div className="hero-enter-scale absolute bottom-16 left-4 z-30 max-w-[230px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:bottom-20 lg:left-12">
+              <div className="mb-2 flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={`t3-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-[12px] leading-relaxed text-white/70">
+                &ldquo;The patio is stunning. Professional team, on time and on budget. Couldn&apos;t ask for more.&rdquo;
+              </p>
+              <div className="mt-2.5 flex items-center gap-2">
+                <div className="h-6 w-6 rounded-full bg-gradient-to-br from-emerald-200 to-emerald-600" />
+                <span className="text-[11px] font-medium text-white/50">Michael T.</span>
+              </div>
+            </div>
+
+            {/* Project card 1 — Kitchen (top right) */}
+            <div className="hero-enter-scale absolute -right-4 top-0 z-20 w-60 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl lg:right-0 lg:w-64">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/images/kitchen_renovation.png"
                   alt="Kitchen renovation"
                   fill
                   className="object-cover"
-                  sizes="288px"
+                  sizes="256px"
                 />
               </div>
-              <div className="px-1 pb-1 pt-3">
+              <div className="px-1 pb-1 pt-2.5">
                 <p className="font-[family-name:var(--font-manrope)] text-xs font-medium text-white/90">
                   Recent Project
                 </p>
@@ -90,26 +145,29 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Floating testimonial card */}
-            <div className="hero-enter-scale absolute -left-8 top-4 z-30 max-w-[260px] rounded-2xl border border-white/10 bg-[#101014]/70 p-5 shadow-2xl backdrop-blur-xl lg:top-12">
-              <div className="mb-3 flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="h-3.5 w-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            {/* Project card 2 — Bathroom (bottom right) */}
+            <div className="hero-enter-scale absolute -right-2 bottom-4 z-20 w-56 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl lg:bottom-8 lg:right-2 lg:w-60">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                <Image
+                  src="/images/bathroom_remodel.png"
+                  alt="Bathroom renovation"
+                  fill
+                  className="object-cover"
+                  sizes="240px"
+                />
               </div>
-              <p className="text-[13px] leading-relaxed text-white/70">
-                &ldquo;Exceptional quality and professionalism from start to finish. Transformed our home.&rdquo;
-              </p>
-              <div className="mt-3 flex items-center gap-2.5">
-                <div className="h-7 w-7 rounded-full bg-gradient-to-br from-amber-200 to-amber-600" />
-                <span className="text-xs font-medium text-white/50">Rachel M.</span>
+              <div className="px-1 pb-1 pt-2.5">
+                <p className="font-[family-name:var(--font-manrope)] text-xs font-medium text-white/90">
+                  Recent Project
+                </p>
+                <p className="mt-0.5 text-[11px] text-white/40">
+                  Bathroom — 6 weeks
+                </p>
               </div>
             </div>
 
-            {/* Stats floating pill */}
-            <div className="hero-enter-scale absolute bottom-40 right-16 z-20 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 shadow-lg backdrop-blur-xl lg:right-24">
+            {/* Stats floating pill — center right */}
+            <div className="hero-enter-scale absolute right-8 top-[55%] z-20 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 shadow-lg backdrop-blur-xl lg:right-16">
               <div className="flex items-center gap-3">
                 <span className="font-[family-name:var(--font-manrope)] text-2xl font-light text-white">250+</span>
                 <span className="text-xs text-white/40">Projects<br />completed</span>
