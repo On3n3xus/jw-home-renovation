@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { Accordion } from "@/components/ui/Accordion";
@@ -45,26 +44,36 @@ export function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="services" className="bg-off-white py-24 md:py-32">
+    <section id="services" className="bg-[#FAFAFA] py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <ScrollReveal className="mb-16 text-center">
           <SectionBadge>Services</SectionBadge>
-          <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-3xl font-medium tracking-tight text-primary-dark md:text-4xl lg:text-[50px]">What we do</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-body-text">Find out which one of our services fit the needs of your project</p>
+          <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-3xl font-medium tracking-tight text-[#101014] md:text-4xl lg:text-[50px]">What we do</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#3D3D47]">Find out which one of our services fit the needs of your project</p>
         </ScrollReveal>
         <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
           <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div key={services[activeIndex].id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} className="absolute inset-0">
-                <Image src={services[activeIndex].image} alt={services[activeIndex].name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-              </motion.div>
-            </AnimatePresence>
+            {services.map((service, i) => (
+              <div
+                key={service.id}
+                className="absolute inset-0 transition-opacity duration-500"
+                style={{ opacity: activeIndex === i ? 1 : 0 }}
+              >
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            ))}
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <div className="divide-y divide-primary-dark/10">
+            <div className="divide-y divide-[#101014]/10">
               {services.map((service, i) => (
                 <Accordion key={service.id} title={service.name} isOpen={activeIndex === i} onToggle={() => setActiveIndex(i)} icon={serviceIcons[service.id]}>
-                  <p className="text-body-text">{service.description}</p>
+                  <p className="text-[#3D3D47]">{service.description}</p>
                 </Accordion>
               ))}
             </div>
