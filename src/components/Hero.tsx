@@ -1,36 +1,51 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, type Variants } from "framer-motion";
-
-const stagger: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+import { motion } from "framer-motion";
 
 export function Hero() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <section className="relative overflow-hidden rounded-b-3xl bg-primary-dark px-6 pb-16 pt-32 md:pb-24 md:pt-40">
       <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-16">
-        <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col gap-6">
-          <motion.div variants={fadeUp}>
+        <div className="flex flex-col gap-6">
+          <motion.div
+            initial={false}
+            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          >
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white">
               <span className="h-2 w-2 rounded-full bg-green-400" />
               Available for work
             </span>
           </motion.div>
-          <motion.h1 variants={fadeUp} className="font-[family-name:var(--font-manrope)] text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl lg:text-[58px] lg:leading-[1.2]">
+          <motion.h1
+            initial={false}
+            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+            className="font-[family-name:var(--font-manrope)] text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl lg:text-[58px] lg:leading-[1.2]"
+          >
             Your trusted partner for quality home improvement
           </motion.h1>
-          <motion.p variants={fadeUp} className="max-w-lg text-lg text-muted-text">
+          <motion.p
+            initial={false}
+            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            className="max-w-lg text-lg text-muted-text"
+          >
             JW Home Renovation delivers expert home improvements, creating beautiful and functional spaces with quality craftsmanship.
           </motion.p>
-          <motion.div variants={fadeUp}>
+          <motion.div
+            initial={false}
+            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
+          >
             <a href="#contact" className="inline-flex items-center gap-8 rounded-full bg-white/10 py-2.5 pl-7 pr-3 font-[family-name:var(--font-manrope)] text-sm font-medium text-white transition-colors hover:bg-white/20">
               Work with us
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark">
@@ -40,10 +55,15 @@ export function Hero() {
               </span>
             </a>
           </motion.div>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="relative">
+        </div>
+        <motion.div
+          initial={false}
+          animate={mounted ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="relative"
+        >
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:aspect-[3/4]">
-            <Image src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=1000&fit=crop" alt="Modern open concept interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=1000&fit=crop" alt="Modern kitchen interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="absolute -bottom-4 -left-4 max-w-xs rounded-xl bg-primary-dark/60 p-5 backdrop-blur-md shadow-2xl border border-white/10 md:-left-8 md:bottom-8">
             <div className="mb-2 flex gap-1">

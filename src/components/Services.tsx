@@ -54,7 +54,7 @@ export function Services() {
         </ScrollReveal>
         <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
           <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" initial={false}>
               <motion.div key={services[activeIndex].id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} className="absolute inset-0">
                 <Image src={services[activeIndex].image} alt={services[activeIndex].name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </motion.div>
