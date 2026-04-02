@@ -43,9 +43,9 @@ export function Hero() {
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:aspect-[3/4]">
-            <Image src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=1000&fit=crop" alt="Modern kitchen interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=1000&fit=crop" alt="Modern open concept interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
-          <div className="absolute -bottom-4 -left-4 max-w-xs rounded-xl bg-primary-dark/80 p-5 backdrop-blur-sm md:-left-8 md:bottom-8">
+          <div className="absolute -bottom-4 -left-4 max-w-xs rounded-xl bg-primary-dark/60 p-5 backdrop-blur-md shadow-2xl border border-white/10 md:-left-8 md:bottom-8">
             <div className="mb-2 flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 20 20">
