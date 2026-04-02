@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#101014]">
+    <section className="relative min-h-screen overflow-hidden rounded-b-3xl bg-[#101014]">
       {/* Background image with cinematic overlay */}
       <div className="absolute inset-0">
         <Image
@@ -117,11 +117,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade for seamless section transition */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-32 bg-gradient-to-t from-white to-transparent" />
-
-      {/* Decorative accent line */}
-      <div className="absolute bottom-0 left-1/2 z-20 h-16 w-px -translate-x-1/2 bg-gradient-to-b from-transparent to-[#3D3D47]/30" />
+      {/* Solid dark bottom edge — no fade */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 h-24 bg-[#101014]" />
     </section>
   );
 }
