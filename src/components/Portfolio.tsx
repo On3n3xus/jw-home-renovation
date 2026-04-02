@@ -26,9 +26,9 @@ export function Portfolio() {
             const styles = variantStyles[project.variant];
             return (
               <ScrollReveal key={project.id} delay={i * 0.1}>
-                <div className={cn("grid overflow-hidden rounded-2xl md:grid-cols-2", styles.bg)}>
+                <div className={cn("group grid overflow-hidden rounded-2xl md:grid-cols-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1", styles.bg)}>
                   <div className="relative aspect-[4/5] md:aspect-auto">
-                    <Image src={project.image} alt={project.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                    <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div className="flex flex-col justify-center gap-6 p-8 md:p-12">
                     <h3 className={cn("font-[family-name:var(--font-manrope)] text-2xl font-medium md:text-3xl", styles.text)}>{project.title}</h3>

@@ -1,71 +1,38 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <section className="relative overflow-hidden rounded-b-3xl bg-primary-dark px-6 pb-16 pt-32 md:pb-24 md:pt-40">
+    <section className="relative overflow-hidden rounded-b-3xl bg-[#101014] px-6 pb-16 pt-32 md:pb-24 md:pt-40">
       <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-16">
         <div className="flex flex-col gap-6">
-          <motion.div
-            initial={false}
-            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          >
+          <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white">
               <span className="h-2 w-2 rounded-full bg-green-400" />
               Available for work
             </span>
-          </motion.div>
-          <motion.h1
-            initial={false}
-            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-            className="font-[family-name:var(--font-manrope)] text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl lg:text-[58px] lg:leading-[1.2]"
-          >
+          </div>
+          <h1 className="font-[family-name:var(--font-manrope)] text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl lg:text-[58px] lg:leading-[1.2]">
             Your trusted partner for quality home improvement
-          </motion.h1>
-          <motion.p
-            initial={false}
-            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="max-w-lg text-lg text-muted-text"
-          >
+          </h1>
+          <p className="max-w-lg text-lg text-[#D0D1DB]">
             JW Home Renovation delivers expert home improvements, creating beautiful and functional spaces with quality craftsmanship.
-          </motion.p>
-          <motion.div
-            initial={false}
-            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
-          >
+          </p>
+          <div>
             <a href="#contact" className="inline-flex items-center gap-8 rounded-full bg-white/10 py-2.5 pl-7 pr-3 font-[family-name:var(--font-manrope)] text-sm font-medium text-white transition-colors hover:bg-white/20">
               Work with us
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#101014]">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-white">
                   <path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
             </a>
-          </motion.div>
+          </div>
         </div>
-        <motion.div
-          initial={false}
-          animate={mounted ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="relative"
-        >
+        <div className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:aspect-[3/4]">
             <Image src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=1000&fit=crop" alt="Modern kitchen interior" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
-          <div className="absolute -bottom-4 -left-4 max-w-xs rounded-xl bg-primary-dark/60 p-5 backdrop-blur-md shadow-2xl border border-white/10 md:-left-8 md:bottom-8">
+          <div className="absolute -bottom-4 -left-4 max-w-xs rounded-xl bg-[#101014]/80 p-5 backdrop-blur-sm md:-left-8 md:bottom-8">
             <div className="mb-2 flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -73,9 +40,9 @@ export function Hero() {
                 </svg>
               ))}
             </div>
-            <p className="text-sm leading-relaxed text-muted-text">&ldquo;Exceptional quality and professionalism from start to finish. Highly recommended!&rdquo;</p>
+            <p className="text-sm leading-relaxed text-[#D0D1DB]">&ldquo;Exceptional quality and professionalism from start to finish. Highly recommended!&rdquo;</p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,233 @@
+<h2>JW Home Renovation — Website Design Spec</h2>
+<p class="subtitle">Review the full spec below. Let me know in the terminal if you'd like any changes.</p>
+
+<div class="section">
+  <h3>Overview</h3>
+  <p>Single-page scrolling website for <strong>JW Home Renovation</strong>, a US-based general contractor. Mirrors the Refit reference site with adapted branding, placeholder content, and US-specific details.</p>
+</div>
+
+<div class="section">
+  <h3>Tech Stack</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+    <div style="background:#f4f4f5;padding:14px;border-radius:10px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:4px;">⚡</div>
+      <strong>Next.js 15</strong><br><span style="font-size:13px;color:#666;">App Router + TypeScript</span>
+    </div>
+    <div style="background:#f4f4f5;padding:14px;border-radius:10px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:4px;">🎨</div>
+      <strong>Tailwind CSS v4</strong><br><span style="font-size:13px;color:#666;">Utility-first styling</span>
+    </div>
+    <div style="background:#f4f4f5;padding:14px;border-radius:10px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:4px;">✨</div>
+      <strong>Framer Motion</strong><br><span style="font-size:13px;color:#666;">Scroll animations</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Color Palette</h3>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#101014;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#101014<br>Primary Dark</span>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#FFFFFF;border:1px solid #ddd;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#FFFFFF<br>White</span>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#FAFAFA;border:1px solid #ddd;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#FAFAFA<br>Off-white</span>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#E9ECF2;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#E9ECF2<br>Light Gray</span>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#3D3D47;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#3D3D47<br>Body Text</span>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#D0D1DB;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#D0D1DB<br>Muted Text</span>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:60px;height:60px;border-radius:10px;background:#28282C;margin-bottom:4px;"></div>
+      <span style="font-size:12px;color:#666;">#28282C<br>Dark Secondary</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Typography</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div style="background:#f4f4f5;padding:16px;border-radius:10px;">
+      <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:500;margin-bottom:4px;">Manrope</div>
+      <p style="font-size:13px;color:#666;margin:0;">Headings, navigation, buttons, stat numbers<br>Weights: 400 (stats), 500 (headings), 700 (logo)</p>
+    </div>
+    <div style="background:#f4f4f5;padding:16px;border-radius:10px;">
+      <div style="font-family:'Host Grotesk',sans-serif;font-size:28px;font-weight:400;margin-bottom:4px;">Host Grotesk</div>
+      <p style="font-size:13px;color:#666;margin:0;">Body text, descriptions, secondary content<br>Weight: 400 (regular)</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Page Sections (9 total)</h3>
+
+  <!-- Nav -->
+  <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">1. Navigation Bar</strong>
+      <span style="background:rgba(255,255,255,0.15);padding:2px 10px;border-radius:12px;font-size:11px;">FIXED</span>
+    </div>
+    <p style="font-size:13px;color:#D0D1DB;margin:0;">Fixed top bar. "JW Home Renovation" logo left, nav links right (About, Services, Our Work, FAQs, Contact). Transparent over hero → solid on scroll with backdrop blur.</p>
+  </div>
+
+  <!-- Hero -->
+  <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">2. Hero Section</strong>
+      <span style="background:rgba(255,255,255,0.15);padding:2px 10px;border-radius:12px;font-size:11px;">DARK BG</span>
+    </div>
+    <p style="font-size:13px;color:#D0D1DB;margin:0;">Two-column: Left — "Available for work" badge, H1 "Your trusted partner for quality home improvement", subtitle, "Work with us" CTA. Right — large kitchen photo + floating testimonial card overlay. Staggered entrance animation.</p>
+  </div>
+
+  <!-- About -->
+  <div style="background:#fff;border:1px solid #e5e5e5;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">3. About Us</strong>
+      <span style="background:rgba(16,16,20,0.08);padding:2px 10px;border-radius:12px;font-size:11px;">WHITE BG</span>
+    </div>
+    <p style="font-size:13px;color:#3D3D47;margin:0 0 8px;">Pill badge + heading "home improvement specialists" + description paragraph.</p>
+    <p style="font-size:13px;color:#3D3D47;margin:0 0 8px;"><strong>Image marquee:</strong> 6 renovation photos auto-scrolling horizontally (infinite loop, pause on hover).</p>
+    <p style="font-size:13px;color:#3D3D47;margin:0;"><strong>Stats:</strong> 15+ years | 250+ projects | 30+ tradespeople | 100% satisfaction — animated counters on scroll.</p>
+  </div>
+
+  <!-- Services -->
+  <div style="background:#FAFAFA;border:1px solid #e5e5e5;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">4. Services</strong>
+      <span style="background:rgba(16,16,20,0.08);padding:2px 10px;border-radius:12px;font-size:11px;">OFF-WHITE BG</span>
+    </div>
+    <p style="font-size:13px;color:#3D3D47;margin:0 0 8px;">Two-column: Left image (swaps per active service), right accordion.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <span style="background:#e5e5e5;padding:3px 10px;border-radius:6px;font-size:12px;">Kitchens</span>
+      <span style="background:#e5e5e5;padding:3px 10px;border-radius:6px;font-size:12px;">Loft Conversions</span>
+      <span style="background:#e5e5e5;padding:3px 10px;border-radius:6px;font-size:12px;">Bathrooms</span>
+      <span style="background:#e5e5e5;padding:3px 10px;border-radius:6px;font-size:12px;">Extensions</span>
+      <span style="background:#e5e5e5;padding:3px 10px;border-radius:6px;font-size:12px;">Restorations</span>
+      <span style="background:#e5e5e5;padding:3px 10px;border-radius:6px;font-size:12px;">External Works</span>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <div style="background:#E9ECF2;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">5. Portfolio (Our Work)</strong>
+      <span style="background:rgba(16,16,20,0.08);padding:2px 10px;border-radius:12px;font-size:11px;">LIGHT GRAY BG</span>
+    </div>
+    <p style="font-size:13px;color:#3D3D47;margin:0 0 8px;">3 stacked project cards with alternating backgrounds (white → dark → light gray). Each card: photo + title + description + category/duration tags + client testimonial quote + avatar.</p>
+    <div style="font-size:12px;color:#3D3D47;">
+      <div>1. Modern kitchen refit — Kitchen — 4 weeks — Rachel Morgan</div>
+      <div>2. External garden path build — External Works — 1 month — Michael Turner</div>
+      <div>3. Bathroom renovation — Bathroom — 6 weeks — Laura Davies</div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div style="background:#fff;border:1px solid #e5e5e5;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">6. Testimonials</strong>
+      <span style="background:rgba(16,16,20,0.08);padding:2px 10px;border-radius:12px;font-size:11px;">WHITE BG</span>
+    </div>
+    <p style="font-size:13px;color:#3D3D47;margin:0;">Two-row auto-scrolling marquee (opposite directions). Each card: 5 stars + quote + avatar + name. 6 placeholder testimonials. Pause on hover.</p>
+  </div>
+
+  <!-- FAQs -->
+  <div style="background:#fff;border:1px solid #e5e5e5;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">7. FAQs</strong>
+      <span style="background:rgba(16,16,20,0.08);padding:2px 10px;border-radius:12px;font-size:11px;">WHITE BG</span>
+    </div>
+    <p style="font-size:13px;color:#3D3D47;margin:0;">Two-column: Left — heading + "Get in touch" CTA. Right — 7-item accordion (service area, timelines, quotes, permits, guarantees, staying home, getting started).</p>
+  </div>
+
+  <!-- Contact -->
+  <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">8. Contact</strong>
+      <span style="background:rgba(255,255,255,0.15);padding:2px 10px;border-radius:12px;font-size:11px;">DARK BG</span>
+    </div>
+    <p style="font-size:13px;color:#D0D1DB;margin:0;">Rounded top corners. Two-column: Left — address, email, phone, social icons. Right — contact form (Name*, Email*, Phone, Message*, "Send message" button). Static only — no backend.</p>
+  </div>
+
+  <!-- Footer -->
+  <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <strong style="font-size:16px;">9. Footer</strong>
+      <span style="background:rgba(255,255,255,0.15);padding:2px 10px;border-radius:12px;font-size:11px;">DARK BG</span>
+    </div>
+    <p style="font-size:13px;color:#D0D1DB;margin:0;">"JW Home Renovation" logo + quick links (2 columns) + copyright bar "© 2026 JW Home Renovation. All rights reserved."</p>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Animations</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Scroll reveals</strong><br>Framer Motion fade + slide-up on viewport entry
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Counter animation</strong><br>Stats count 0 → target when visible
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Image marquee</strong><br>CSS keyframes, infinite horizontal scroll
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Testimonial marquee</strong><br>Two rows, opposite directions
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Service image crossfade</strong><br>AnimatePresence on accordion change
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Accordion expand/collapse</strong><br>Framer Motion height animation
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Navbar transition</strong><br>CSS transition on scroll > 50px
+    </div>
+    <div style="background:#f4f4f5;padding:12px;border-radius:8px;font-size:13px;">
+      <strong>Hero stagger</strong><br>Elements enter sequentially on load
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Responsive Breakpoints</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+    <div style="background:#f4f4f5;padding:14px;border-radius:8px;text-align:center;">
+      <div style="font-size:20px;font-weight:600;">Desktop</div>
+      <div style="font-size:13px;color:#666;">≥1280px — Full layouts</div>
+    </div>
+    <div style="background:#f4f4f5;padding:14px;border-radius:8px;text-align:center;">
+      <div style="font-size:20px;font-weight:600;">Tablet</div>
+      <div style="font-size:13px;color:#666;">768–1279px — Reduced fonts</div>
+    </div>
+    <div style="background:#f4f4f5;padding:14px;border-radius:8px;text-align:center;">
+      <div style="font-size:20px;font-weight:600;">Mobile</div>
+      <div style="font-size:13px;color:#666;">&lt;768px — Single column</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Out of Scope</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+    <span style="background:#fee2e2;color:#991b1b;padding:4px 12px;border-radius:6px;font-size:13px;">Backend / API routes</span>
+    <span style="background:#fee2e2;color:#991b1b;padding:4px 12px;border-radius:6px;font-size:13px;">CMS integration</span>
+    <span style="background:#fee2e2;color:#991b1b;padding:4px 12px;border-radius:6px;font-size:13px;">Authentication</span>
+    <span style="background:#fee2e2;color:#991b1b;padding:4px 12px;border-radius:6px;font-size:13px;">Blog / dynamic pages</span>
+    <span style="background:#fee2e2;color:#991b1b;padding:4px 12px;border-radius:6px;font-size:13px;">Analytics</span>
+    <span style="background:#fee2e2;color:#991b1b;padding:4px 12px;border-radius:6px;font-size:13px;">Email delivery</span>
+  </div>
+</div>

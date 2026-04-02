@@ -1,0 +1,84 @@
+<h2>JW Home Renovation — Site Structure</h2>
+<p class="subtitle">Single-page scrolling site mirroring the Refit reference. All sections listed top to bottom.</p>
+
+<div class="section">
+  <h3>Page Sections (scroll order)</h3>
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:700px;margin:0 auto;">
+
+    <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(255,255,255,0.15);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">1</span>
+      <div><strong>Navigation</strong> — Fixed top bar. "JW Home Renovation" logo left, nav links right (About, Services, Our Work, FAQs, Contact). Transparent over hero, solid on scroll.</div>
+    </div>
+
+    <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(255,255,255,0.15);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">2</span>
+      <div><strong>Hero</strong> — Dark bg, two-column. Left: "Available for work" badge + H1 headline + subtitle + "Work with us" CTA. Right: Large interior photo + floating testimonial card overlay.</div>
+    </div>
+
+    <div style="background:#fff;color:#101014;padding:16px 20px;border-radius:12px;border:1px solid #e5e5e5;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(16,16,20,0.08);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">3</span>
+      <div><strong>About Us</strong> — White bg. Section pill + heading + description. Auto-scrolling image marquee. 4 animated stat counters (Years, Projects, Team, Satisfaction).</div>
+    </div>
+
+    <div style="background:#FAFAFA;color:#101014;padding:16px 20px;border-radius:12px;border:1px solid #e5e5e5;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(16,16,20,0.08);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">4</span>
+      <div><strong>Services</strong> — Off-white bg. Two-column: left image (swaps per service), right accordion (6 services with icons, expand/collapse).</div>
+    </div>
+
+    <div style="background:#E9ECF2;color:#101014;padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(16,16,20,0.08);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">5</span>
+      <div><strong>Our Work (Portfolio)</strong> — Cool gray bg. 3 stacked project cards with alternating light/dark backgrounds, each with photo + details + tags + client testimonial.</div>
+    </div>
+
+    <div style="background:#fff;color:#101014;padding:16px 20px;border-radius:12px;border:1px solid #e5e5e5;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(16,16,20,0.08);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">6</span>
+      <div><strong>Testimonials</strong> — White bg. Two-row auto-scrolling marquee (opposite directions). Each card: stars + quote + avatar + name.</div>
+    </div>
+
+    <div style="background:#fff;color:#101014;padding:16px 20px;border-radius:12px;border:1px solid #e5e5e5;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(16,16,20,0.08);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">7</span>
+      <div><strong>FAQs</strong> — White bg. Two-column: left heading + "Get in touch" CTA, right accordion with 7 questions.</div>
+    </div>
+
+    <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(255,255,255,0.15);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">8</span>
+      <div><strong>Contact</strong> — Dark bg with rounded top corners. Two-column: left contact details (address, email, phone, socials), right contact form (Name, Email, Phone, Message + submit).</div>
+    </div>
+
+    <div style="background:#101014;color:#fff;padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;">
+      <span style="background:rgba(255,255,255,0.15);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;">9</span>
+      <div><strong>Footer</strong> — Dark bg. Logo + quick links columns + copyright bar.</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" style="margin-top:32px;">
+  <h3>Design System</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px;margin:0 auto;">
+    <div style="background:#f8f8f8;padding:16px;border-radius:8px;">
+      <div class="label">Colors</div>
+      <div style="display:flex;gap:8px;margin:8px 0;">
+        <div style="width:32px;height:32px;border-radius:6px;background:#101014;" title="#101014"></div>
+        <div style="width:32px;height:32px;border-radius:6px;background:#FFFFFF;border:1px solid #ddd;" title="#FFFFFF"></div>
+        <div style="width:32px;height:32px;border-radius:6px;background:#FAFAFA;border:1px solid #ddd;" title="#FAFAFA"></div>
+        <div style="width:32px;height:32px;border-radius:6px;background:#E9ECF2;" title="#E9ECF2"></div>
+        <div style="width:32px;height:32px;border-radius:6px;background:#3D3D47;" title="#3D3D47"></div>
+        <div style="width:32px;height:32px;border-radius:6px;background:#D0D1DB;" title="#D0D1DB"></div>
+      </div>
+      <p style="font-size:13px;color:#666;">Monochromatic: dark charcoal, white, soft grays</p>
+    </div>
+    <div style="background:#f8f8f8;padding:16px;border-radius:8px;">
+      <div class="label">Typography</div>
+      <p style="font-family:sans-serif;font-size:13px;color:#666;margin:8px 0;"><strong>Manrope</strong> — Headings, nav, buttons, stat numbers<br><strong>Host Grotesk</strong> — Body text, descriptions</p>
+    </div>
+    <div style="background:#f8f8f8;padding:16px;border-radius:8px;">
+      <div class="label">Animations</div>
+      <p style="font-size:13px;color:#666;margin:8px 0;">Framer Motion: scroll reveals, counter animations, section transitions. CSS: infinite marquees (images + testimonials).</p>
+    </div>
+    <div style="background:#f8f8f8;padding:16px;border-radius:8px;">
+      <div class="label">Tech Stack</div>
+      <p style="font-size:13px;color:#666;margin:8px 0;">Next.js 15 (App Router) + Tailwind CSS v4 + Framer Motion + TypeScript</p>
+    </div>
+  </div>
+</div>
