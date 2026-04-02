@@ -10,10 +10,12 @@ export const contactInfo = {
 };
 
 export const aboutImages = [
-  "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
-  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop",
+  "/images/hero_interior.png",
+  "/images/bathroom_remodel.png",
+  "/images/kitchen_renovation.png",
+  "/images/basement_conversion.png",
+  "/images/home_exterior.png",
+  "/images/outdoor_patio.png",
+  "/images/living_room_remodel.png",
+  "/images/master_bedroom.png",
 ];
