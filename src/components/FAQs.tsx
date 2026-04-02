@@ -10,8 +10,8 @@ export function FAQs() {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section id="faqs" className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="faqs" className="py-16 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <ScrollReveal>
             <SectionBadge>FAQs</SectionBadge>

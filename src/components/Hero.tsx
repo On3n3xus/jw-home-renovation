@@ -15,16 +15,18 @@ export function Hero() {
         />
         {/* Cinematic gradient overlays for depth */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#101014] via-[#101014]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101014] via-transparent to-[#101014]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101014] via-[#101014]/30 to-[#101014]/40" />
+        {/* Extra mobile overlay for readability */}
+        <div className="absolute inset-0 bg-[#101014]/40 md:bg-transparent" />
         {/* Subtle noise texture for film grain feel */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E")', backgroundSize: '128px 128px' }} />
       </div>
 
       {/* Content layer */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-6 pb-20 pt-32 md:items-center md:pb-0">
-        <div className="grid w-full items-center gap-12 md:grid-cols-12 md:gap-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-4 pb-24 pt-24 sm:px-6 md:items-center md:pb-0 md:pt-32">
+        <div className="grid w-full items-center gap-8 md:grid-cols-12 md:gap-8">
           {/* Left: Copy */}
-          <div className="flex flex-col gap-7 md:col-span-6 lg:col-span-5">
+          <div className="flex flex-col gap-5 md:col-span-6 md:gap-7 lg:col-span-5">
             <div className="hero-enter hero-enter-1">
               <span className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-md">
                 <span className="relative flex h-2 w-2">

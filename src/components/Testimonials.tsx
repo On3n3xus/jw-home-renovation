@@ -6,7 +6,7 @@ import { testimonials } from "@/data/testimonials";
 
 function TestimonialCard({ quote, author, avatar }: { quote: string; author: string; avatar: string }) {
   return (
-    <div className="w-80 shrink-0 rounded-2xl bg-off-white p-6">
+    <div className="w-72 shrink-0 rounded-2xl bg-off-white p-5 sm:w-80 sm:p-6">
       <div className="mb-3 flex gap-1">
         {[...Array(5)].map((_, i) => (
           <svg key={i} className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -28,8 +28,8 @@ export function Testimonials() {
   const secondHalf = testimonials.slice(3);
 
   return (
-    <section className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-16 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <ScrollReveal className="mb-16 text-center">
           <SectionBadge>Testimonials</SectionBadge>
           <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-3xl font-medium tracking-tight text-primary-dark md:text-4xl lg:text-[50px]">Hear from our clients</h2>

@@ -44,8 +44,8 @@ export function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="services" className="bg-[#FAFAFA] py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="services" className="bg-[#FAFAFA] py-16 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <ScrollReveal className="mb-16 text-center">
           <SectionBadge>Services</SectionBadge>
           <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-3xl font-medium tracking-tight text-[#101014] md:text-4xl lg:text-[50px]">What we do</h2>

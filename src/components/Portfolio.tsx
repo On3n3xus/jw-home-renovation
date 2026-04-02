@@ -14,8 +14,8 @@ const variantStyles = {
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="bg-light-gray py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="portfolio" className="bg-light-gray py-16 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <ScrollReveal className="mb-16 text-center">
           <SectionBadge>Our work</SectionBadge>
           <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-3xl font-medium tracking-tight text-primary-dark md:text-4xl lg:text-[50px]">Get inspired by our work</h2>
@@ -27,7 +27,7 @@ export function Portfolio() {
             return (
               <ScrollReveal key={project.id} delay={i * 0.1}>
                 <div className={cn("group grid overflow-hidden rounded-2xl md:grid-cols-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1", styles.bg)}>
-                  <div className="relative aspect-[4/5] md:aspect-auto">
+                  <div className="relative aspect-[16/10] md:aspect-auto md:min-h-full">
                     <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div className="flex flex-col justify-center gap-6 p-8 md:p-12">

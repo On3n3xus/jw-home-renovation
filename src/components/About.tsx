@@ -10,8 +10,8 @@ import { aboutImages } from "@/data/contact";
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="about" className="py-16 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <ScrollReveal className="mb-16 text-center">
           <SectionBadge>About us</SectionBadge>
           <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-3xl font-medium tracking-tight text-primary-dark md:text-4xl lg:text-[50px]">
