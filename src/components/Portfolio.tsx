@@ -5,6 +5,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { projects } from "@/data/projects";
 import { cn } from "@/lib/utils";
+import { blurDataURLs } from "@/data/blur-placeholders";
 
 const variantStyles = {
   light: { bg: "bg-white", text: "text-primary-dark", quote: "text-body-text", tag: "bg-light-gray text-body-text" },
@@ -33,7 +34,7 @@ export function Portfolio() {
                 <div className="pb-6">
                   <div className={cn("group grid overflow-hidden rounded-2xl shadow-lg md:grid-cols-2 transition-all duration-500 hover:shadow-2xl", styles.bg)}>
                     <div className="relative aspect-[16/10] md:aspect-auto md:min-h-full">
-                      <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                      <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" placeholder="blur" blurDataURL={blurDataURLs[project.image]} />
                     </div>
                     <div className="flex flex-col justify-center gap-6 p-8 md:p-12">
                       <h3 className={cn("font-[family-name:var(--font-manrope)] text-2xl font-medium md:text-3xl", styles.text)}>{project.title}</h3>

@@ -7,6 +7,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Marquee } from "@/components/ui/Marquee";
 import { stats } from "@/data/stats";
 import { aboutImages } from "@/data/contact";
+import { blurDataURLs } from "@/data/blur-placeholders";
 
 export function About() {
   return (
@@ -25,7 +26,7 @@ export function About() {
           <Marquee speed="40s">
             {aboutImages.map((src, i) => (
               <div key={i} className="relative h-[300px] w-[250px] shrink-0 overflow-hidden md:h-[600px] md:w-[500px]">
-                <Image src={src} alt={`Renovation project ${i + 1}`} fill className="object-cover transition-transform duration-700 hover:scale-105" sizes="(max-width: 768px) 250px, 500px" />
+                <Image src={src} alt={`Renovation project ${i + 1}`} fill className="object-cover transition-transform duration-700 hover:scale-105" sizes="(max-width: 768px) 250px, 500px" placeholder="blur" blurDataURL={blurDataURLs[src]} />
               </div>
             ))}
           </Marquee>

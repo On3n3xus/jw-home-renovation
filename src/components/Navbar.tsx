@@ -63,15 +63,17 @@ export function Navbar() {
             Get a Quote
           </a>
 
-          {/* Mobile hamburger */}
+          {/* Mobile hamburger — morphs to X */}
           <button
-            onClick={() => setMenuOpen(true)}
-            className="flex items-center justify-center rounded-full p-2.5 transition-colors hover:bg-white/10 md:hidden"
-            aria-label="Open menu"
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="relative flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-white/10 md:hidden"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-white">
-              <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
+            <span className="flex h-4 w-5 flex-col justify-between">
+              <span className={`block h-[1.5px] w-full rounded-full bg-white transition-all duration-300 origin-center ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`} />
+              <span className={`block h-[1.5px] w-full rounded-full bg-white transition-all duration-300 ${menuOpen ? "scale-x-0 opacity-0" : ""}`} />
+              <span className={`block h-[1.5px] w-full rounded-full bg-white transition-all duration-300 origin-center ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`} />
+            </span>
           </button>
         </div>
       </div>

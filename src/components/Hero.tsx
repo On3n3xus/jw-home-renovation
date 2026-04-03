@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { blurDataURLs } from "@/data/blur-placeholders";
 
 export function Hero() {
   return (
@@ -12,6 +13,8 @@ export function Hero() {
           className="object-cover object-center"
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={blurDataURLs["/images/hero_interior.png"]}
         />
         {/* Cinematic gradient overlays for depth */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#101014] via-[#101014]/80 to-transparent" />
@@ -121,7 +124,7 @@ export function Hero() {
               {/* Project 1 — Kitchen */}
               <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                  <Image src="/images/kitchen_renovation.png" alt="Kitchen renovation" fill className="object-cover" sizes="220px" />
+                  <Image src="/images/kitchen_renovation.png" alt="Kitchen renovation" fill className="object-cover" sizes="220px" placeholder="blur" blurDataURL={blurDataURLs["/images/kitchen_renovation.png"]} />
                 </div>
                 <div className="px-1 pb-1 pt-2">
                   <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Kitchen Remodel</p>
@@ -132,7 +135,7 @@ export function Hero() {
               {/* Project 2 — Outdoor Patio */}
               <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                  <Image src="/images/outdoor_patio.png" alt="Outdoor patio" fill className="object-cover" sizes="220px" />
+                  <Image src="/images/outdoor_patio.png" alt="Outdoor patio" fill className="object-cover" sizes="220px" placeholder="blur" blurDataURL={blurDataURLs["/images/outdoor_patio.png"]} />
                 </div>
                 <div className="px-1 pb-1 pt-2">
                   <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Outdoor Patio</p>
@@ -143,7 +146,7 @@ export function Hero() {
               {/* Project 3 — Bathroom */}
               <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                  <Image src="/images/bathroom_remodel.png" alt="Bathroom renovation" fill className="object-cover" sizes="220px" />
+                  <Image src="/images/bathroom_remodel.png" alt="Bathroom renovation" fill className="object-cover" sizes="220px" placeholder="blur" blurDataURL={blurDataURLs["/images/bathroom_remodel.png"]} />
                 </div>
                 <div className="px-1 pb-1 pt-2">
                   <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Bathroom Reno</p>
@@ -154,7 +157,7 @@ export function Hero() {
               {/* Project 4 — Living Room */}
               <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                  <Image src="/images/living_room_remodel.png" alt="Living room remodel" fill className="object-cover" sizes="220px" />
+                  <Image src="/images/living_room_remodel.png" alt="Living room remodel" fill className="object-cover" sizes="220px" placeholder="blur" blurDataURL={blurDataURLs["/images/living_room_remodel.png"]} />
                 </div>
                 <div className="px-1 pb-1 pt-2">
                   <p className="font-[family-name:var(--font-manrope)] text-[11px] font-medium text-white/90">Living Room</p>
