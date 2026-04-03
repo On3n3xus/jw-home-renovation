@@ -39,11 +39,41 @@ const socialIcons: Record<string, React.ReactNode> = {
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setSending(true);
+    setError(false);
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -87,7 +117,26 @@ export function Contact() {
               </div>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={0.2}>
+          <ScrollReveal delay={0.2} interactive>
+            {submitted ? (
+              <div className="flex flex-col items-center justify-center gap-4 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-6 py-16 text-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/20">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </div>
+                <h3 className="font-[family-name:var(--font-manrope)] text-xl font-semibold text-white">Message received!</h3>
+                <p className="max-w-sm text-sm leading-relaxed text-muted-text">
+                  Thank you for reaching out. JW Home Renovation has received your inquiry and will get back to you as soon as possible. A confirmation has been sent to your email.
+                </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="mt-2 rounded-full border border-white/10 px-6 py-2.5 font-[family-name:var(--font-manrope)] text-sm font-medium text-white transition-colors hover:bg-white/10"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div>
                 <label htmlFor="name" className="mb-1 block text-sm text-muted-text">Name *</label>
@@ -99,16 +148,20 @@ export function Contact() {
               </div>
               <div>
                 <label htmlFor="phone" className="mb-1 block text-sm text-muted-text">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(512) 555-0000" className="w-full rounded-md border border-white/10 bg-off-white px-4 py-3 text-primary-dark placeholder:text-body-text/50 focus:outline-none focus:ring-2 focus:ring-white/20" />
+                <input type="tel" id="phone" name="phone" placeholder="(612) 555-0000" className="w-full rounded-md border border-white/10 bg-off-white px-4 py-3 text-primary-dark placeholder:text-body-text/50 focus:outline-none focus:ring-2 focus:ring-white/20" />
               </div>
               <div>
                 <label htmlFor="message" className="mb-1 block text-sm text-muted-text">Message *</label>
                 <textarea id="message" name="message" required rows={5} placeholder="Hello, I'd like to enquire about..." className="w-full resize-none rounded-md border border-white/10 bg-off-white px-4 py-3 text-primary-dark placeholder:text-body-text/50 focus:outline-none focus:ring-2 focus:ring-white/20" />
               </div>
-              <button type="submit" className="mt-2 w-full rounded-md bg-white py-3 font-[family-name:var(--font-manrope)] text-sm font-semibold text-[#101014] transition-colors hover:bg-white/90">
-                {submitted ? "Message sent!" : "Send message"}
+              {error && (
+                <p className="text-sm text-red-400">Something went wrong. Please try again.</p>
+              )}
+              <button type="submit" disabled={sending} className="mt-2 w-full rounded-md bg-white py-3 font-[family-name:var(--font-manrope)] text-sm font-semibold text-[#101014] transition-colors hover:bg-white/90 disabled:opacity-60">
+                {sending ? "Sending..." : "Send message"}
               </button>
             </form>
+            )}
           </ScrollReveal>
         </div>
       </div>
