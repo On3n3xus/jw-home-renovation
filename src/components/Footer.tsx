@@ -36,7 +36,8 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/10 pt-8 md:mt-16">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:mt-16 md:flex-row">
+          <p className="text-sm text-muted-text">&copy; 2026 JW Home Renovation. All rights reserved.</p>
           <a
             href="https://neurosparkmarketing.com/"
             target="_blank"
@@ -45,7 +46,6 @@ export function Footer() {
           >
             Built by <span className="font-medium text-white/80">Neurospark Marketing</span>
           </a>
-          <p className="text-sm text-muted-text">&copy; 2026 JW Home Renovation. All rights reserved.</p>
         </div>
       </div>
     </footer>

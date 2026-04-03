@@ -71,7 +71,7 @@ export function Hero() {
           <div className="relative hidden min-h-[600px] md:col-span-6 md:block lg:col-span-7">
 
             {/* Testimonial 1 — top left */}
-            <div className="hero-enter-scale absolute -left-6 top-0 z-30 hidden max-w-[240px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:-left-8 lg:top-4 lg:block">
+            <div className="hero-enter-scale absolute -left-8 top-4 z-30 hidden max-w-[240px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:block">
               <div className="mb-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={`t1-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -79,17 +79,14 @@ export function Hero() {
                   </svg>
                 ))}
               </div>
-              <p className="text-[12px] leading-relaxed text-white/70">
-                &ldquo;Exceptional quality and professionalism from start to finish. Transformed our home.&rdquo;
-              </p>
+              <p className="text-[12px] leading-relaxed text-white/70">&ldquo;Exceptional quality and professionalism from start to finish. Transformed our home.&rdquo;</p>
               <div className="mt-2.5 flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-gradient-to-br from-amber-200 to-amber-600" />
                 <span className="text-[11px] font-medium text-white/50">Rachel M.</span>
               </div>
             </div>
 
-            {/* Testimonial 2 — mid left */}
-            <div className="hero-enter-scale absolute -left-4 top-[170px] z-30 hidden max-w-[220px] rounded-2xl border border-white/10 bg-[#101014]/60 p-4 shadow-2xl backdrop-blur-xl lg:left-0 lg:top-[180px] lg:block">
+            <div className="hero-enter-scale absolute left-0 top-[180px] z-30 hidden max-w-[220px] rounded-2xl border border-white/10 bg-[#101014]/60 p-4 shadow-2xl backdrop-blur-xl lg:block">
               <div className="mb-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={`t2-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -97,17 +94,14 @@ export function Hero() {
                   </svg>
                 ))}
               </div>
-              <p className="text-[12px] leading-relaxed text-white/70">
-                &ldquo;Our loft conversion added so much space. Thoughtful design and exceptional build quality.&rdquo;
-              </p>
+              <p className="text-[12px] leading-relaxed text-white/70">&ldquo;Our loft conversion added so much space. Thoughtful design and exceptional build quality.&rdquo;</p>
               <div className="mt-2.5 flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-200 to-sky-600" />
                 <span className="text-[11px] font-medium text-white/50">Sophie W.</span>
               </div>
             </div>
 
-            {/* Testimonial 3 — bottom center-left */}
-            <div className="hero-enter-scale absolute bottom-16 left-4 z-30 hidden max-w-[230px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:bottom-20 lg:left-12 lg:block">
+            <div className="hero-enter-scale absolute bottom-20 left-12 z-30 hidden max-w-[230px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:block">
               <div className="mb-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={`t3-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -115,9 +109,7 @@ export function Hero() {
                   </svg>
                 ))}
               </div>
-              <p className="text-[12px] leading-relaxed text-white/70">
-                &ldquo;The patio is stunning. Professional team, on time and on budget. Couldn&apos;t ask for more.&rdquo;
-              </p>
+              <p className="text-[12px] leading-relaxed text-white/70">&ldquo;The patio is stunning. Professional team, on time and on budget. Couldn&apos;t ask for more.&rdquo;</p>
               <div className="mt-2.5 flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-gradient-to-br from-emerald-200 to-emerald-600" />
                 <span className="text-[11px] font-medium text-white/50">Michael T.</span>
