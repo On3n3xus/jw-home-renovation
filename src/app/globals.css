@@ -59,6 +59,15 @@ body {
     animation: revealFadeUp linear both;
     animation-timeline: view();
     animation-range: entry 0% entry 30%;
+    animation-fill-mode: forwards;
+  }
+
+  /* Prevent scroll-driven animation from blocking interactivity on interactive sections */
+  .reveal-interactive {
+    animation: none;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
   }
 }
 

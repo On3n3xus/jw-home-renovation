@@ -30,8 +30,8 @@ export function Navbar() {
           className={cn(
             "mx-auto mt-4 flex max-w-fit items-center gap-1 rounded-full border px-2 py-2 transition-all duration-500 md:gap-2 md:px-3",
             scrolled
-              ? "border-white/15 bg-[#101014]/80 shadow-2xl shadow-black/30 backdrop-blur-xl"
-              : "border-white/10 bg-white/[0.06] backdrop-blur-md"
+              ? "border-white/15 bg-[#101014]/90 shadow-2xl shadow-black/30 backdrop-blur-2xl md:bg-[#101014]/95"
+              : "border-white/10 bg-[#101014]/40 backdrop-blur-xl md:bg-[#101014]/60"
           )}
         >
           {/* Logo */}

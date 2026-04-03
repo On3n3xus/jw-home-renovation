@@ -71,7 +71,7 @@ export function Hero() {
           <div className="relative hidden min-h-[600px] md:col-span-6 md:block lg:col-span-7">
 
             {/* Testimonial 1 — top left */}
-            <div className="hero-enter-scale absolute -left-6 top-0 z-30 max-w-[240px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:-left-8 lg:top-4">
+            <div className="hero-enter-scale absolute -left-6 top-0 z-30 hidden max-w-[240px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:-left-8 lg:top-4 lg:block">
               <div className="mb-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={`t1-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -89,7 +89,7 @@ export function Hero() {
             </div>
 
             {/* Testimonial 2 — mid left */}
-            <div className="hero-enter-scale absolute -left-4 top-[170px] z-30 max-w-[220px] rounded-2xl border border-white/10 bg-[#101014]/60 p-4 shadow-2xl backdrop-blur-xl lg:left-0 lg:top-[180px]">
+            <div className="hero-enter-scale absolute -left-4 top-[170px] z-30 hidden max-w-[220px] rounded-2xl border border-white/10 bg-[#101014]/60 p-4 shadow-2xl backdrop-blur-xl lg:left-0 lg:top-[180px] lg:block">
               <div className="mb-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={`t2-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -107,7 +107,7 @@ export function Hero() {
             </div>
 
             {/* Testimonial 3 — bottom center-left */}
-            <div className="hero-enter-scale absolute bottom-16 left-4 z-30 max-w-[230px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:bottom-20 lg:left-12">
+            <div className="hero-enter-scale absolute bottom-16 left-4 z-30 hidden max-w-[230px] rounded-2xl border border-white/10 bg-[#101014]/70 p-4 shadow-2xl backdrop-blur-xl lg:bottom-20 lg:left-12 lg:block">
               <div className="mb-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <svg key={`t3-${i}`} className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -125,7 +125,7 @@ export function Hero() {
             </div>
 
             {/* Right column: 4 project cards in a 2x2 grid layout */}
-            <div className="absolute right-0 top-0 bottom-0 flex w-[52%] flex-wrap content-start gap-3 lg:w-[55%]">
+            <div className="absolute right-0 top-0 bottom-0 flex w-full flex-wrap content-start gap-3 lg:w-[55%]">
               {/* Project 1 — Kitchen */}
               <div className="hero-enter-scale w-[calc(50%-6px)] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-2 shadow-2xl backdrop-blur-xl">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">

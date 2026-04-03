@@ -20,8 +20,10 @@ export function Accordion({
   return (
     <div className={className}>
       <button
+        type="button"
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-5 text-left"
+        className="flex w-full cursor-pointer items-center justify-between py-5 text-left touch-action-manipulation"
+        style={{ touchAction: "manipulation" }}
       >
         <div className="flex items-center gap-4">
           {icon && <span className="text-[#101014]/60">{icon}</span>}

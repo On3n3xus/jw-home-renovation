@@ -26,7 +26,7 @@ export function FAQs() {
               </span>
             </a>
           </ScrollReveal>
-          <ScrollReveal delay={0.2}>
+          <ScrollReveal delay={0.2} interactive>
             <div className="divide-y divide-primary-dark/10">
               {faqs.map((faq) => (
                 <Accordion key={faq.id} title={faq.question} isOpen={openId === faq.id} onToggle={() => setOpenId(openId === faq.id ? null : faq.id)}>

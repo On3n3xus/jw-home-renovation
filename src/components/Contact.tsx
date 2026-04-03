@@ -60,7 +60,7 @@ export function Contact() {
               <div className="pb-6">
                 <p className="mb-1 text-sm text-muted-text">Office</p>
                 <p className="text-white">{contactInfo.address.line1}</p>
-                <p className="text-white">{contactInfo.address.line2}</p>
+                {contactInfo.address.line2 && <p className="text-white">{contactInfo.address.line2}</p>}
               </div>
               <div className="py-6">
                 <p className="mb-1 text-sm text-muted-text">Email</p>

@@ -69,7 +69,7 @@ export function Services() {
               </div>
             ))}
           </ScrollReveal>
-          <ScrollReveal delay={0.2}>
+          <ScrollReveal delay={0.2} interactive>
             <div className="divide-y divide-[#101014]/10">
               {services.map((service, i) => (
                 <Accordion key={service.id} title={service.name} isOpen={activeIndex === i} onToggle={() => setActiveIndex(i)} icon={serviceIcons[service.id]}>

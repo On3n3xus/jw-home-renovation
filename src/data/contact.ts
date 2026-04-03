@@ -1,11 +1,9 @@
 export const contactInfo = {
-  address: { line1: "742 Evergreen Terrace, Suite 100", line2: "Austin, TX 78701" },
-  email: "hello@jwhomerenovation.com",
-  phone: "(512) 555-0147",
+  address: { line1: "Brooklyn Center, MN", line2: "" },
+  email: "whomereno@gmail.com",
+  phone: "(612) 845-6852",
   socials: [
-    { name: "Instagram", href: "#" },
-    { name: "Facebook", href: "#" },
-    { name: "X", href: "#" },
+    { name: "Instagram", href: "https://www.instagram.com/jwhomerenovationsllc/" },
   ],
 };
 
